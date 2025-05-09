@@ -1,0 +1,103 @@
+:root {
+  --heading-color: #000; /* Light mode heading color */
+}
+
+[data-theme="dark"] {
+  --heading-color: #fff; /* Dark mode heading color */
+}
+
+.skillsContainer h1,
+.skillName {
+  color: var(--heading-color);
+}
+
+.skillsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 items per row on larger screens */
+  justify-content: center; /* Center the grid */
+  gap: 30px; /* Space between grid items */
+}
+
+/* Skill item styling */
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.skillName {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.outerCircle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerCircle {
+  width: 70%;
+  height: 70%;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.innerCircle span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Responsive breakpoints */
+
+/* For tablets (up to 768px) */
+@media (max-width: 768px) {
+  .skillsContainer {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on medium screens */
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .innerCircle span {
+    font-size: 14px;
+  }
+}
+
+/* For mobile devices (up to 480px) */
+@media (max-width: 480px) {
+  .skillsContainer {
+    grid-template-columns: 1fr; /* 1 item per row on small screens */
+    gap: 20px;
+  }
+
+  .circle {
+    width: 70px;
+    height: 70px;
+  }
+
+  .innerCircle span {
+    font-size: 12px;
+  }
+}
+
+  
+  
+  
