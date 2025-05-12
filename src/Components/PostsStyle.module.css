@@ -47,15 +47,24 @@
   
   .actions {
     margin-top: 0.5rem;
+}
+
+  .name{
+    color: var(--text-color);    
   }
   
   .actions button {
     background-color: crimson;
     color: white;
+    border-radius: 10%;
     border: none;
     padding: 0.3rem 0.6rem;
     cursor: pointer;
-  }
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+}
 
   .btn {
     padding: 0.8rem 2rem;

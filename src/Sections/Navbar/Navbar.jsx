@@ -29,9 +29,7 @@ function Navbar() {
         <li>
           <a href="#AddBlogs">Add Blogs</a>
         </li>
-        <li>
-          <a href="#AddProjects">Add Projects</a>
-        </li>
+        
         {isAuthenticated ? (
           <li>
             <button className={styles.btn}

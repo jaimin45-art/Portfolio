@@ -13,7 +13,6 @@ function Posts() {
     const storedBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
     setBlogs(storedBlogs);
   }, []);
-
   // Save to localStorage when blogs change
   useEffect(() => {
     localStorage.setItem("blogs", JSON.stringify(blogs));
@@ -54,7 +53,7 @@ function Posts() {
   return (
     <div className={styles.container}>
       <header>
-        <h2>📝 Blog App</h2>
+        <h2>📝Add Your Blog </h2>
       
       </header>
 
@@ -76,9 +75,9 @@ function Posts() {
       <div className={styles.list}>
         {blogs.map((blog) => (
           <div key={blog.id} className={styles.card}>
-            <h3>{blog.title}</h3>
-            <p>{blog.body}</p>
-            <small>By: {blog.userName || "Anonymous"}</small>
+            <h3>{blog.title}</h3> <br/>
+            <p>{blog.body}</p> <br/>
+            <small className={styles.name} >By: {blog.userName || "Anonymous"}</small>
 
             {isAuthenticated && blog.userId === user?.sub && (
               <div className={styles.actions}>
