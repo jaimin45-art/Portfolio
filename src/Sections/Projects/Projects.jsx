@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './ProjectsStyles.Module.css'
+import styles from './ProjectsStyles.module.css'
 // import viberr from '../../assets/assets/viberr.png'
 import Game from '../../assets/assets/art-illustration-355362837 (1).webp'
 // import freshBurger from '../../assets/assets/fresh-burger.png';
